@@ -1618,7 +1618,6 @@ input, select, textarea {
 	footer {
 		margin: 2.25em 0 0 0;
 	}
-
 /* Box */
 
 	.box {
@@ -2272,7 +2271,7 @@ input, select, textarea {
 		text-align: center;
 		position: relative;
 		padding: 4em 0;
-		margin: 4em 0 0 0;
+		/*margin: 4em 0 0 0;*/
 		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
 
