@@ -4,14 +4,6 @@
     
 }
 
-
-
-@media only screen and (min-width: 600px) {
-    body {
-       
-    }
-  } /* Not working*/ 
-
 body{
     color: white;
     background-color: #FCC012;
@@ -268,7 +260,7 @@ main{
 }
 
 .card_border div{
-  
+  margin: auto;
     
 }
 
@@ -279,7 +271,8 @@ main{
 
 .card_border_y div{
   
-    
+    margin: auto
+    ;
 }
 
 .card_description{
