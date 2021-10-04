@@ -11,10 +11,10 @@ body{
 }
 
 .container{
-    display: flex;
+
     background-color: #21242c;
-    margin: 25px;
-    height: 95.5vh;
+    margin: 2.5vh 2.5vh 2.5vh 2.5vh;
+    height: 95vh;
 
    
    
@@ -30,53 +30,137 @@ body{
 }
 
 .inside_projects{
-    max-width: 1854px;
+    max-width: 1250px;
     margin: auto;
-    font-size: 25px;
+    font-size: 17.5px;
 
 }
+
+@media (max-width:  1400px){
+    .inside_projects{
+        width: 90%;
+        margin: auto;
+        
+    
+    }
+
+    .container_projects{
+    
+        margin: 0px;
+    
+       
+    }
+}
+
+
+
+/* ESTO ES PARA ULTRA WIDE*/
+
+/*@media (min-width:  2500px){
+    .inside_projects{
+        width: 90%;
+        margin: auto;
+        font-size: 25px;
+    
+    }
+
+    .container_projects{
+    
+        background-color: #21242c;
+        width: 2450px;
+        height: 100%;
+        margin: auto;
+       
+    }
+}*/
+
 
 .main_page{
     display: flex;
     height: 100%;
     margin: auto;
-    width: 1854px;
-    padding-left: 11%;
-    padding-right: 17%;
-
+    max-width: 900px;
+    
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content:left;
 }
 
-.main_page div h1{
+
+.main_title h1{
     color: #FCC012;
-    font-size: 200px;
-    line-height: 230px;
-    margin-bottom: 40px;
+    font-size: 140px;
+    line-height: 161px;
+    margin-bottom: 28px;
     font-family: 'Bitter', serif;
+    margin-right: 150px;
 }
 
-.main_page div h3{
-    font-size: 50px;
+.main_title h3{
+    font-size: 35px;
     font-weight: normal;
 }
 
 .main_page div img:hover{
-    margin-left: -10%;
-    margin-top: -10%;
+
+    margin-right: 10px;
     opacity: 0.7;
-    width: 120%;
-    height: 120%;
+    width: 90%;
+    height: 90%;
     cursor: pointer;
    
 }
 
+.play-button{
+
+    width: 70%;
+    margin-top: -50px;
+}
+
+@media (min-width:  1400px){
+    .main_page{
+
+        max-width: 1300px;
+        justify-content: left;
+    }
+    
+
+    
+    .main_title h1{
+
+        font-size: 200px;
+        line-height: 230px;
+        margin-bottom: 40px;
+        margin-right: 200px;
+    }
+    
+    .main_title h3{
+        font-size: 50px;
+    }
+    
+    .main_page div img:hover{
+        
+        margin-right: 20px;
+        opacity: 0.7;
+        width: 120%;
+        height: 120%;
+        cursor: pointer;
+       
+    }
+    
+    .play-button{
+        width: 100%;
+        margin-top: -75px;
+    }
+}
+
+
 .project_page{
     display: flex;
     
-    margin: auto;
-    padding-top: 200px;
-  
+    margin: 0px 25px;
+    padding-top: 140px;
+    
 
     align-items: center;
     justify-content: space-between;
@@ -84,14 +168,14 @@ body{
 
 .project_page div h1{
     color: #FCC012;
-    font-size: 200px;
-    line-height: 230px;
-    margin-bottom: 40px;
+    font-size: 140px;
+    line-height: 160px;
+    margin-bottom: 28px;
     font-family: 'Bitter', serif;
 }
 
 .project_page div h3{
-    font-size: 50px;
+    font-size: 35px;
     font-weight: normal;
 }
 
@@ -133,17 +217,19 @@ body{
 
 header{
     display: flex;
-    padding-top: 60px;
+    padding-top: 42px;
     flex-wrap: nowrap;
-    height: 70px;
+    height: 49px;
+    margin: 0px 25px;
     justify-content: space-between;
 	border-bottom:5px solid #FCC012;
     font-family: 'Bitter', serif
+    
 }
 
 .Big{
     flex: 3 1 50%;
-    
+    min-width: 200px;
 }
 
 .Big h3 a{
@@ -153,7 +239,7 @@ header{
 }
 
 .Big h3 a:hover{
-    border-bottom: 5px solid white;
+    border-bottom: 2px solid white;
 }
 
 
@@ -161,6 +247,7 @@ header{
     flex: 1 6 16.66%;
     text-align: center;
     margin: 0px 10px 0px 10px;
+    min-width: 100px;
 }
 
 .Small h3 a{
@@ -170,7 +257,7 @@ header{
 }
 
 .Small h3 a:hover{
-    border-bottom: 5px solid white;
+    border-bottom: 2px solid white;
 }
 
 /* No funciona*/
@@ -183,6 +270,11 @@ header h3{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@media (max-width:  640px){
+    
+}
+
+
 main{
     color: white;
 }
@@ -193,13 +285,27 @@ main{
     color: white;
 }
 
+
+
+
+@media (max-width:  1400px){
+    .container_main {
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+    }
+}
+
+
+
+
+
 .title{
-    margin: 100px auto 56px auto;
-    width: 330px;
-    padding: 17px;
+    margin: 70px auto 20px auto;
+    width: 230px;
+    padding: 12px;
     text-align: center;
     border: 3px solid white;
-    font-size: 25px;
+    font-size: 17.5px;
 
 }
 
@@ -215,16 +321,16 @@ main{
     background-color: #FCC012;
     color: #21242c;
     font-weight: bold;
-    max-width: 478px;
-
+    max-width: 335px;
+    margin: 25px;
 }
 
 .cards_blue{
     border: 5px solid #FCC012;
     color: #21242c;
     font-weight: bold;
-    max-width: 478px;
-
+    max-width: 335px;
+    margin: 25px;
 }
 
 .cards_yellow a{
@@ -239,18 +345,18 @@ main{
 
 
 .card_inside{
-    padding: 50px 50px 50px 50px;
+    padding: 35px;
 }
 
 .card_title{
    text-align: center;
-   margin-bottom: 40px;
+   margin-bottom: 28px;
    font-family: 'Bitter', serif
 }
 
 .card_title h1 {
     font-weight:bold;
-    font-size: 50px;
+    font-size: 35px;
     
 }
 
@@ -276,19 +382,19 @@ main{
 }
 
 .card_description{
-    margin-top: 40px;
-    font-size: 25px;
+    margin-top: 28px;
+    font-size: 17.5px;
 }
 
 .card_plus{
  position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .card_plus_sign {
     
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 
     position: absolute;
     right: 0%;
@@ -299,11 +405,11 @@ main{
     position: absolute;
     display: block;
     background-color: #21242c;
-    height: 10px;
-    margin-top: -5px;
+    height: 7px;
+    margin-top: -3.5px;
     top: 50%;
-    left: 5px;
-    right: 5px;
+    left: 3.5px;
+    right: 3.5px;
     z-index: 9;
   }
   .card_plus_sign::before {
@@ -311,18 +417,18 @@ main{
     position: absolute;
     display: block;
     background-color: #21242c;
-    width: 10px;
-    margin-left: -5px;
+    width: 7px;
+    margin-left: -3.5px;
     left: 50%;
-    top: 5px;
-    bottom: 5px;
+    top: 3.5px;
+    bottom: 3.5px;
     z-index: 9;
   }
 
   .card_plus_sign_y {
     
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 
     position: absolute;
     right: 0%;
@@ -333,11 +439,11 @@ main{
     position: absolute;
     display: block;
     background-color: #FCC012;
-    height: 10px;
-    margin-top: -5px;
+    height: 7px;
+    margin-top: -3.5px;
     top: 50%;
-    left: 5px;
-    right: 5px;
+    left: 3.5px;
+    right: 3.5px;
     z-index: 9;
   }
   .card_plus_sign_y::before {
@@ -345,35 +451,36 @@ main{
     position: absolute;
     display: block;
     background-color: #FCC012;
-    width: 10px;
-    margin-left: -5px;
+    width: 7px;
+    margin-left: -3.5px;
     left: 50%;
-    top: 5px;
-    bottom: 5px;
+    top: 3.5px;
+    bottom: 3.5px;
     z-index: 9;
   }
 
 /*FOOTER*/
 
   footer{
-    margin-top: 200px;
+    margin: 0px 25px;
+    margin-top: 140px;
     border-top: 5px solid #FCC012;
-    margin-bottom: 25px;
-    padding-bottom: 30px;
+    margin-bottom: 17.5px;
+    padding-bottom: 21px;
     display: flex;
     justify-content: center;
   }
 
  
   .footer_social{
-        width: 30px;
-        height: 30px;
+        width: 21px;
+        height: 21px;
   }
 
   /*PAGINA JUEGOS*/
 
 .container_individual_project{
-    margin-top: 350px;
+    margin-top: 245px;
     display: flex;
     justify-content: space-between;
 }
@@ -382,7 +489,7 @@ main{
     width: 100%;
     max-width: 48%;
     border: 5px solid #FCC012;
-    height: 500px;
+    height: 350px;
 }
 
 .img_cover{
@@ -399,20 +506,20 @@ main{
 }
 
 .txt_titles{
-    font-size: 50px;
-    padding: 25px;
+    font-size: 35px;
+    padding: 17.5px;
     color: white;
     border-bottom: 5px solid #FCC012;
 }
 
 .txt_description{
-    margin-top: 25px;
-    font-size: 25px;
+    margin-top: 17.5px;
+    font-size: 17.5px;
 }
 
 .screenshots_rectangle{
     width: 100%;
-    max-height: 1000px;
+    max-height: 700px;
     border: 5px solid #FCC012;;
 }
 
@@ -567,7 +674,7 @@ main{
 
 .container-images{
     width: 100%;
-    max-width: 1920px;
+    max-width: 1344px;
 
 
   }
@@ -580,7 +687,7 @@ main{
   
   
   .insideImage{
-      max-height: 1000px ;
+      max-height: 700px ;
       margin: auto;
   }
   
@@ -594,11 +701,50 @@ main{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   
   .active, .dot:hover {
     background-color: #717171;
   }
   
+
+
+
+
+  /*ABOUT PAGE*/
+
+
+
+
+.about_page{
+    display: flex;
+    
+    margin: 0px 25px;
+    padding-top: 140px;
+    
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about_page div h1{
+    color: #FCC012;
+    font-size: 140px;
+    line-height: 160px;
+    margin-bottom: 28px;
+    font-family: 'Bitter', serif;
+}
+
+.about_page div h3{
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.myface{
+    border: 5px solid #FCC012 ;
+    width: 45%;
+    padding-bottom:30% ;
+}
+
   
