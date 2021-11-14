@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!-- WEB DESCRIPTION -->
+    <title>Pedro Ribot</title>
+    <meta name='description' content='Personal portfolio of Pedro Núñez Ribot, game designer, vfx and motion capture.'>
+    <meta name='keywords' content='personal portfolio, pedro núñez ribot, game designer, vfx, motion capture.'>
+    <meta name='author' content='Alicia Martinez (ambiby)'>
+    <meta name='Language' content='ENG'>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lato:wght@400;900&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/aeb58df177.js" crossorigin="anonymous"></script>
+
+    <!-- STYLE -->
+    <link href='css/general.css' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+    <!-- SCRIPTS -->
+    <script src='js/burger-menu.js' async></script>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="menu-burger">
+            <span></span>
+        </div>
+        <nav>
+            <a href="index.html" onclick="closeBurger()">
+                <h4 class="text-primary">PEDRO RIBOT</h4>
+            </a>
+            <div id="menu-nav">
+                <a href="index.html#projects" onclick="closeBurger()">
+                    <h4>PROJECTS</h4>
+                </a>
+                <a href="about.html" onclick="closeBurger()">
+                    <h4>ABOUT ME</h4>
+                </a>
+                <a href="contact.html" onclick="closeBurger()" class="active">
+                    <h4>CONTACT</h4>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-info">
+            <div class="title" data-aos="fade-up" data-aos-duration="600">
+                <h2 class="text-primary">CONTACT INFORMATION</h2>
+                <div class="line bg-primary"></div>
+                <p class="top-text">Contact me in any of these channels, I will be glad to respond as soon as possible.
+                    Thanks for looking at my portfolio!</p>
+            </div>
+            <div class="info-data" data-aos="fade-up" data-aos-duration="600">
+                <a href="mailto:pedro.ribot09@gmail.com" class="link"><i class="fas fa-envelope"></i>
+                    pedro.ribot09@gmail.com</a><br>
+                <p><i class="fas fa-phone-alt"></i> +34 662 14 67 68</p>
+                <a href="mailto:pedro.ribot09@gmail.com" class="link"><i class="fab fa-linkedin"></i> Pedro Núñez
+                    Ribot</a><br>
+                <a href="mailto:pedro.ribot09@gmail.com" class="link"><i class="fab fa-instagram"></i>
+                    pedro.ribot</a><br>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="always-bottom">
+        <h4 class="text-primary text-center">Pedro Ribot</h4>
+        <div>
+            <a target="blank" href="https://www.instagram.com/pedro.ribot/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a target="blank" href="https://www.linkedin.com/in/pedro-núñez-ribot-808977185/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a target="blank" href="mailto:pedro.ribot09@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ANIMATIONS -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
