@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!-- WEB DESCRIPTION -->
+    <title>Pedro Ribot</title>
+    <meta name='description' content='Personal portfolio of Pedro Núñez Ribot, game designer, vfx and motion capture.'>
+    <meta name='keywords' content='personal portfolio, pedro núñez ribot, game designer, vfx, motion capture.'>
+    <meta name='author' content='Alicia Martinez (ambiby)'>
+    <meta name='Language' content='ENG'>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lato:wght@400;900&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/aeb58df177.js" crossorigin="anonymous"></script>
+
+    <!-- STYLE -->
+    <link href='css/general.css' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+    <!-- SCRIPTS -->
+    <script src='js/burger-menu.js' async></script>
+    <script src='js/projects.js' async></script>
+    <script src='js/video.js' async></script>
+    <script src='js/cover.js' async></script>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="menu-burger">
+            <span></span>
+        </div>
+        <nav>
+            <a href="index.html" onclick="closeBurger()">
+                <h4 class="text-primary">PEDRO RIBOT</h4>
+            </a>
+            <div id="menu-nav">
+                <a href="index.html#projects" onclick="closeBurger()" class="active">
+                    <h4>WORKS</h4>
+                </a>
+                <a href="about.html" onclick="closeBurger()">
+                    <h4>ABOUT ME</h4>
+                </a>
+                <a href="contact.html" onclick="closeBurger()">
+                    <h4>CONTACT</h4>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="video">
+        <div class="video-container">
+            <iframe id="videoSq" src="" frameborder="0" allowfullscreen></iframe>
+            <i class="fas fa-times"></i>
+        </div>
+    </section>
+
+    <section id="cover">
+        <video autoplay muted loop id="myVideo">
+            <source src="video/video-cover.mp4" type="video/mp4">
+        </video>
+        <div class="video-cover"></div>
+        <div class="cover-content">
+            <h1>Pedro Ribot</h1>
+            <div class="line bg-light line-big"></div>
+            <h3>GAME DESIGNER</h3>
+            <div class="buttons">
+                <a href="contact.html" class="button">CONTACT ME</a>
+                <a href="data/CV_PedroNúñezRibot.pdf" download class="link">Download my CV</a>
+            </div>
+        </div>
+        <!-- TO CHANGE REEL -->
+        <a class="button-video" data-url="https://www.youtube.com/embed/sRE2Nt9wlLQ">
+            <i class="fas fa-play-circle"></i>
+        </a>
+        <div class="menu-nav">
+            <a onclick = "hideCover()">
+                <h4>WORKS</h4>
+            </a>
+            <a href="about.html" onclick = "hideCover()">
+                <h4>ABOUT ME</h4>
+            </a>
+            <a href="contact.html" onclick = "hideCover()">
+                <h4>CONTACT</h4>
+            </a>
+        </div>
+    </section>
+
+    <main>
+        <section id="projects">
+            <div class="title" data-aos="fade-up" data-aos-duration="600">
+                <h2 class="text-primary">WORKS</h2>
+                <div class="line bg-primary"></div>
+                <p class="top-text">Includes personal, univerty and professional works since I started to porsue to work in the media industry. The projects below can be filtered in different fields. </p>
+            </div>
+            <div class="projects-links" data-aos="fade-up" data-aos-duration="600">
+                <h4 id="button-all" style="padding: 0px 15px 5px 0px;">All projects</h4>
+                <h4 class="text-primary" id="button-games" style="padding: 0px 15px 5px 0px;">Games</h4>
+                <h4 class="text-secondary" id="button-3d"style="padding: 0px 15px 5px 0px;">3D Modeling</h4>
+                <h4 class="text-tertiary" id="button-leveldesign"style="padding: 0px 15px 5px 0px;">Level Design</h4>
+                <h4 class="text-other" id="button-other" style="padding: 0px 15px 5px 0px;">Other</h4>
+            </div>
+            <div id="projects-container" data-aos="fade-up" data-aos-duration="600">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h4 class="text-primary text-center">Pedro Ribot</h4>
+        <div>
+            <a target="blank" href="https://www.instagram.com/pedro.ribot/">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a target="blank" href="https://www.linkedin.com/in/pedro-núñez-ribot-808977185/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a target="blank" href="mailto:pedro.ribot09@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ANIMATIONS -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
