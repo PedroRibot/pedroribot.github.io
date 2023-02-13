@@ -8,18 +8,20 @@
     <!-- WEB DESCRIPTION -->
     <title>Pedro Ribot</title>
     <meta name='description' content='Personal portfolio of Pedro Núñez Ribot, game designer, vfx and motion capture.'>
-    <meta name='keywords' content='personal portfolio, pedro núñez ribot, game designer, vfx, motion capture.'>
+    <meta name='keywords' content='personal portfolio, pedro núñez ribot , game designer, vfx, motion capture.'>
     <meta name='author' content='Alicia Martinez (ambiby)'>
     <meta name='Language' content='ENG'>
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lato:wght@400;900&display=swap"
-        rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/aeb58df177.js" crossorigin="anonymous"></script>
+     <!-- FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lato:wght@400;900&display=swap"
+         rel="stylesheet">
+       
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+     <!-- FONT AWESOME -->
+     <script src="https://kit.fontawesome.com/aeb58df177.js" crossorigin="anonymous"></script>
 
     <!-- STYLE -->
     <link href='css/general.css' rel='stylesheet' type='text/css'>
@@ -54,18 +56,19 @@
             <span></span>
         </div>
         <nav>
-            <a href="index.html" onclick="closeBurger()">
-                <h4 class="text-primary">PEDRO RIBOT</h4>
-            </a>
+            <div class="main-name">
+                    <h6 class="text-primary">Pedro Núñez Ribot</h6>
+            </div>
+            
             <div id="menu-nav">
-                <a href="index.html#projects" onclick="closeBurger()">
-                    <h4>WORKS</h4>
+                <a href="index.html#projects" onclick="closeBurger()" class="active">
+                    <h5>PROJECTS</h4>
                 </a>
                 <a href="about.html" onclick="closeBurger()">
-                    <h4>ABOUT ME</h4>
+                    <h5>ABOUT ME</h4>
                 </a>
                 <a href="contact.html" onclick="closeBurger()">
-                    <h4>CONTACT</h4>
+                    <h5>CONTACT</h4>
                 </a>
             </div>
         </nav>
@@ -81,18 +84,18 @@
                 <a class="button button-video hide" id="trailer-button"><i class="fas fa-play-circle"></i> Watch
                     trailer</a>
                 <a class="button button-video hide" id="gameplay-button"><i class="fas fa-play-circle"></i> Watch
-                    gameplay</a>
+                    video</a>
             </div>
         </div>
     </section>
     <main>
         <section id="project-info" data-aos="fade-up" data-aos-duration="600">
             <div class="info-block">
-                <h4 class="text-primary">AUTHOR</h4>
+                <h4 class="text-primary">TEAM</h4>
                 <p id="author"></p>
             </div>
             <div class="info-block">
-                <h4 class="text-primary">DISCIPLINES</h4>
+                <h4 class="text-primary">MY AREAS</h4>
                 <p id="disciplines"></p>
             </div>
             <div class="info-block" id="awards-title">
@@ -102,7 +105,7 @@
                 </div>
             </div>
             <div class="info-block" id="client-title">
-                <h4 class="text-primary">CLIENT</h4>
+                <h4 class="text-primary">PRODUCED BY</h4>
                 <a id="client" class="link" href=""></a>
             </div>
         </section>
@@ -133,24 +136,27 @@
         </section>
         <br><br>
         <a class="link" href="index.html" data-aos="fade-up" data-aos-duration="600">
-            < Back to projects</a>
+             Back to projects</a>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <h4 class="text-primary text-center">Pedro Ribot</h4>
-        <div>
-            <a target="blank" href="https://www.instagram.com/pedro.ribot/">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a target="blank" href="https://www.linkedin.com/in/pedro-núñez-ribot-808977185/">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a target="blank" href="mailto:pedro.ribot09@gmail.com">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-    </footer>
+   <!-- FOOTER -->
+   <footer>
+    <h4 class="text-primary text-center">
+        <p style="font-weight: lighter; color: dimgray;">Portfolio showcaising projects from Pedro Núñez Ribot</p>
+        <img src="images/logos/LOGO BLACK SVG.svg" style="width: 50px; margin-top: 15px;" ></img>
+    </h4>
+    <div> <!--
+        <a target="blank" href="https://www.instagram.com/pedro.ribot/">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a target="blank" href="https://www.linkedin.com/in/pedro-núñez-ribot-808977185/">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="blank" href="mailto:pedro.ribot09@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>-->
+    </div>
+</footer>
 
     <!-- ANIMATIONS -->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
