@@ -33,20 +33,29 @@ function createProject(json) {
     hoverDiv.id = i;
     projectDiv.append(hoverDiv);
 
-    let titleDiv = document.createElement("h4");
-    titleDiv.textContent =
-      json["projects"][i]["title"] + " - " + json["projects"][i]["year"];
-    projectDiv.append(titleDiv);
+    let yearDiv = document.createElement("h5");
+    yearDiv.className = "year-element";
+    yearDiv.textContent =
+      json["projects"][i]["year"];
+    projectDiv.append(yearDiv);
 
+    let titleDiv = document.createElement("h6");
+    titleDiv.textContent =
+      json["projects"][i]["title"];
+    projectDiv.append(titleDiv);
+    
+   
+    
+    /*
     let colorDiv = document.createElement("div");
     colorDiv.className = "color-div";
     projectDiv.append(colorDiv);
-
+    */
     let infoDiv = document.createElement("div");
     infoDiv.className = "project-info";
     projectDiv.append(infoDiv);
-
-    let labelsDiv = document.createElement("div");
+    
+   /* let labelsDiv = document.createElement("div");
     labelsDiv.className = "labels";
     infoDiv.append(labelsDiv);
 
@@ -70,16 +79,32 @@ function createProject(json) {
         labelP.textContent = "OTHER";
       }
       labelsDiv.append(labelP);
-    }
+    }*/
 
-    let descP = document.createElement("p");
+
+    
+
+    let descP = document.createElement("h7");
     descP.className = "short-desc";
-    descP.textContent = json["projects"][i]["short-description"];
+    descP.textContent = json["projects"][i]["short-description"] ;
     infoDiv.append(descP);
 
+    
     let projectImg = document.createElement("img");
     projectImg.src = "images/" + json["projects"][i]["small-cover"];
     infoDiv.append(projectImg);
+
+
+    let disciplines = document.createElement("h7");
+    disciplines.className = "client";
+    disciplines.textContent = json["projects"][i]["disciplines"] ;
+    infoDiv.append(disciplines);
+
+    let client = document.createElement("h7");
+    client.className = "client";
+    client.textContent =  json["projects"][i]["client"][0][0];
+    infoDiv.append(client);
+    
   }
 
   clasification();
@@ -101,8 +126,8 @@ function clasification() {
 
   buttonGame.addEventListener("click", showGame);
   button3d.addEventListener("click", show3d);
-  buttonLevelDesign.addEventListener("click", showLevelDesign);
-  buttonOther.addEventListener("click", showOther);
+ // buttonLevelDesign.addEventListener("click", showLevelDesign);
+ // buttonOther.addEventListener("click", showOther);
   buttonAll.addEventListener("click", showAll);
 
   function showGame() {

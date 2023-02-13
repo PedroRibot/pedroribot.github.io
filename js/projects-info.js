@@ -58,7 +58,7 @@ function projectInfo(json) {
     var project_title = document.getElementById("project-title");
     var link_title = document.getElementById("links-title");
     var link_line = document.getElementById("links-line");
-
+    /*
     if (json["projects"][pv]["principal-type"] == "3d") {
       for (var i = 0; i < primary_text.length; i++) {
         primary_text[i].style.color = "var(--secondary)";
@@ -83,15 +83,17 @@ function projectInfo(json) {
         primary_bg[i].style.background = "var(--other)";
       }
       project_info.style.borderColor = "var(--other)";
-    }
+    }*/
 
     title.textContent = json["projects"][pv]["title"];
     short_description.textContent = json["projects"][pv]["short-description"];
     year.textContent = json["projects"][pv]["year"];
+
+    /*
     project_title.style.backgroundImage =
       "linear-gradient(to top, var(--dark), rgba(0, 0, 0, 0)), url('images/" +
       json["projects"][pv]["big-cover"] +
-      "')";
+      "')";*/
 
     var buttonsLength = json["projects"][pv]["buttons"].length;
     for (var i = 0; i < buttonsLength; i++) {

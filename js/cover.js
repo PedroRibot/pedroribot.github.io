@@ -1,6 +1,6 @@
 var cover = document.getElementById("cover");
 
-window.onload = function () {
+/*window.onload = function () {
   var actual = window.location + "";
   var split = actual.split("#");
   var id = split[split.length - 1];
@@ -9,9 +9,9 @@ window.onload = function () {
   } else {
     showCover();
   }
-};
+};*/
 
-function showCover() {
+/*function showCover() {
   cover.style.top = 0;
 }
 
@@ -38,4 +38,4 @@ window.addEventListener("scroll", () => {
     showCover();
   }
   lastScroll = currentScroll;
-});
+});*/
