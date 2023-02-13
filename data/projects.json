@@ -57,7 +57,7 @@
             "keyword": "smdemo",
             "title": "Sunset Motel - DEMO",
             "year": "2022",
-            "type-project": ["game", "leveldesign"],
+            "type-project": ["game", "3d"],
             "principal-type": "game",
             "short-description": "VR demo protoype for an narrative interactive experience",
             "small-cover": "SMD_img1.jpg",
