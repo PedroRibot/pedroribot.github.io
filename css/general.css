@@ -27,7 +27,8 @@ main {
 
 /* GENERAL - COLORS */
 :root {
-    --primary: #FF5F34;
+    /* --primary: #FF5F34;*/
+    --primary: #a7a3af;
     --abcent: #e4e4e4;
     --dark: #eeeeec;
     --light: #252525;
