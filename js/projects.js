@@ -10,6 +10,7 @@ var projectKeyword;
 request.onload = function () {
   const projects = request.response;
   createProject(projects);
+  showGame();
 };
 
 const divProjects = document.getElementById("projects-container");
