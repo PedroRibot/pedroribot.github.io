@@ -10,7 +10,16 @@ var projectKeyword;
 request.onload = function () {
   const projects = request.response;
   createProject(projects);
-  showGame();
+
+  // To show only the videogames
+  var proAll = document.getElementsByClassName("project");
+  var proGame = document.getElementsByClassName("project-game");
+  for (var i = 0; i < proAll.length; i++) {
+    proAll[i].classList.add("hide");
+  }
+  for (var i = 0; i < proGame.length; i++) {
+      proGame[i].classList.remove("hide");
+  }
 };
 
 const divProjects = document.getElementById("projects-container");
