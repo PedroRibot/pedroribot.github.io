@@ -1,6 +1,7 @@
 var menu_burger = document.getElementById("menu-burger");
 var menu_nav = document.getElementById("menu-nav");
 
+
 if (menu_burger !== null) {  
     menu_burger.onclick = function() { toggleEvent(); };
 
