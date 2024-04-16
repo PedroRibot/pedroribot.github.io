@@ -4,6 +4,8 @@ import vertex from '../shaders/vertex.js';
 import fragment from '../shaders/fragment.js';
 
 
+//Referencing the code in https://github.com/Proinn/reaction_diffusion_three_js/
+
 export default class GrayScott{
 	constructor(){
 		//create renderer
@@ -43,12 +45,13 @@ export default class GrayScott{
 
 		// create uniforms
 		this.time = 0;
-        this.killrate_min = 0.06232;
+        this.killrate_min = 0.06;
 		this.killrate_max = 0.06232;
         this.feedrate = 0.05888;
         this.difussion_a = 1.;
         this.difussion_b = 0.5;
-		this.brush_size = 150.;
+		this.brush_size = 10000.;
+
 
 		this.addMesh();
 		this.mouseEffects();
@@ -60,7 +63,7 @@ export default class GrayScott{
         //calculate gs step
 
         this.mesh.material = this.gs_material;
-		for (let index = 0; index < 8; index++) {
+		for (let index = 0; index < 16; index++) {
 			this.gs_material.uniforms.previous_texture.value = this.prev_target.texture;
 			this.renderer.setRenderTarget(this.next_target);
 			this.renderer.render( this.scene, this.camera);
@@ -84,6 +87,12 @@ export default class GrayScott{
     		var mMouseY = e.offsetY;
         	this.gs_material.uniforms.brush.value = new THREE.Vector2(mMouseX/this.canvas.clientWidth, 1-mMouseY/this.canvas.clientHeight );
 			});
+		this.canvas.addEventListener("mousedown", (e)=>{    
+			this.gs_material.uniforms.mouse_pressed.value = 1 ;
+			});
+		this.canvas.addEventListener("mouseup", (e)=>{    
+			this.gs_material.uniforms.mouse_pressed.value = 0 ;
+			});
 	}
 
 	addMesh(){
@@ -100,7 +109,8 @@ export default class GrayScott{
 				time: {type: 'f', value: this.time},
 				brush: {type: 'vec2', value: new THREE.Vector2(0.5,0.5)},
 				brush_size: {type: 'f', value: this.brush_size},
-				screen_size: {type: 'vec2', value: new THREE.Vector2(this.width, this.height)}
+				screen_size: {type: 'vec2', value: new THREE.Vector2(this.width, this.height)},
+				mouse_pressed: {type:'int', value: 1}
 			},
 			transparent: true,
 			depthTest: false,

@@ -10,6 +10,8 @@ uniform float killrate_max;
 uniform float feedrate;
 uniform float difussion_a;
 uniform float difussion_b;
+uniform float time;
+uniform int mouse_pressed;
 
 
 void main(){
@@ -35,15 +37,20 @@ void main(){
 
 
     gl_FragColor =  vec4(clamp(a,0.,1.), clamp(b,0.,1.),0. ,1.);
-
-    if(brush.x > 0.0){
-        vec2 diff = (vUv - brush) * screen_size;
-        float dist = dot(diff, diff);
-        if(dist < brush_size)
-            gl_FragColor = vec4(0.,1.,0.,1.);
+    
+    if (mouse_pressed == 1){
+        if(brush.x > 0.0 ){
+            vec2 diff = (vUv - brush) * screen_size;
+            float dist = dot(diff, diff);
+            if(dist < brush_size){
+                    gl_FragColor = vec4(0.,1.,0.,1.);
+            }  
+        }
     }
+    
 
     
+
 }`;
 
 export default gs;
