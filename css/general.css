@@ -7,6 +7,17 @@
     box-sizing: border-box;
 }
 
+canvas {
+    /*width: 100vw;
+    height: 100vh;
+    display: block;*/
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
 html, body {
     margin: auto;
     box-sizing: border-box;
