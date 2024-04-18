@@ -202,19 +202,28 @@
     margin:  5px 5px 5px -5px;
     font-size: 14px;
     line-height: 18px;
+    height: 35px;
     font-weight: normal;
 }
 
 #projects-container .project .project-info .client{
     
+    margin-top:  -15px;
+    margin-left: -5px;
+    font-size: 11px;
+    font-weight: normal;
+    color: rgb(230, 129, 230);
+}
+
+#projects-container .project .project-info .roles{
     margin:  -5px;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: normal;
 }
 
 #projects-container .project .project-info img{
     
-    margin: 10px 0px;
+    margin: 10px 0px 0px 0px;
     width: 100%;
     max-width: 100%;
 
@@ -344,6 +353,7 @@
 #project-info .info-block {
     margin: 0px 10px;
     margin-bottom: 20px;
+
     width: 20%;
 }
 

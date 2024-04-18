@@ -11,15 +11,15 @@ request.onload = function () {
   const projects = request.response;
   createProject(projects);
 
-  // To show only the videogames
-  var proAll = document.getElementsByClassName("project");
-  var proGame = document.getElementsByClassName("project-game");
-  for (var i = 0; i < proAll.length; i++) {
-    proAll[i].classList.add("hide");
-  }
-  for (var i = 0; i < proGame.length; i++) {
-      proGame[i].classList.remove("hide");
-  }
+  // // To show only the videogames
+  // var proAll = document.getElementsByClassName("project");
+  // var proGame = document.getElementsByClassName("project-game");
+  // for (var i = 0; i < proAll.length; i++) {
+  //   proAll[i].classList.add("hide");
+  // }
+  // for (var i = 0; i < proGame.length; i++) {
+  //     proGame[i].classList.remove("hide");
+  // }
 };
 
 const divProjects = document.getElementById("projects-container");
@@ -106,7 +106,7 @@ function createProject(json) {
 
 
     let disciplines = document.createElement("h7");
-    disciplines.className = "client";
+    disciplines.className = "roles";
     disciplines.textContent = json["projects"][i]["disciplines"] ;
     infoDiv.append(disciplines);
 

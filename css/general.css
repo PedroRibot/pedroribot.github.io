@@ -3,7 +3,7 @@
     padding: 0;
     color: var(--light);
 
-    transition: all 0.2s ease-in-out;
+     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
 }
 
@@ -71,7 +71,8 @@ main {
 .bg-abcent {background-color: var(--abcent)}
 
 /* GENERAL - TEXT */
-
+/* 'Big Shoulders Display' */
+/* Courier Prime' */
 h1 {
     font-family: 'Big Shoulders Display', sans-serif;
     font-style: normal;
@@ -105,23 +106,23 @@ h4 {
 }
 
 h5 { /* SUB HEADER PROJECTS, ABOUT */
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
 }
 
-h6 { /* MAIN NAME HEADER */
+h6 { 
     font-family: 'Big Shoulders Display', sans-serif;
     font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: lighter;
+    font-size: 26px;
     line-height: 32px;
 }
 
 h7 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
     font-style: normal;
     font-weight: lighter;
     font-size: 14px;
@@ -129,16 +130,25 @@ h7 {
 }
 
 h8 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
     font-style: normal;
     font-weight: lighter;
     font-size: 7px;
     line-height: 35px;
 }
 
+/* MAIN NAME HEADER */
+h10 {
+    font-family: 'Courier Prime', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+}
+
 
 p {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Courier Prime', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -318,13 +328,13 @@ header #menu-nav {
 
 header #menu-nav a{
     /*margin: auto 25px;*/
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right:  30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .active {
-    border-bottom: 2px solid var(--light);
+    /* border-bottom: 2px solid var(--light); */
     font-weight: bold;
 }
 
