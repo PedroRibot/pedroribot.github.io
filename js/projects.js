@@ -100,9 +100,9 @@ function createProject(json) {
     infoDiv.append(descP);
 
     
-    let projectImg = document.createElement("img");
-    projectImg.src = "images/" + json["projects"][i]["small-cover"];
-    infoDiv.append(projectImg);
+    // let projectImg = document.createElement("img");
+    // projectImg.src = "images/" + json["projects"][i]["small-cover"];
+    // infoDiv.append(projectImg);
 
 
     let disciplines = document.createElement("h7");

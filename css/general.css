@@ -445,8 +445,8 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 25px;
-    border-top: 2px solid var(--light);
-    margin-top: 15px;
+    
+    margin-top: 15px 10px;
 }
 
 footer div i {
