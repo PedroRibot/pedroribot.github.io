@@ -13,6 +13,11 @@ uniform float difussion_b;
 uniform float time;
 uniform int mouse_pressed;
 
+uniform int hovered;
+uniform float panel_size;
+uniform vec2 panel_pos;
+
+
 
 void main(){
     vec2 step = vec2(1.,1.)/screen_size;
@@ -39,13 +44,24 @@ void main(){
     gl_FragColor =  vec4(clamp(a,0.,1.), clamp(b,0.,1.),0. ,1.);
     
     if (mouse_pressed == 1){
-        if(brush.x > 0.0 ){
-            vec2 diff = (vUv - brush) * screen_size;
-            float dist = dot(diff, diff);
-            if(dist < brush_size){
-                    gl_FragColor = vec4(0.,1.,0.,1.);
-            }  
+        
+        vec2 diff = (vUv - brush) * screen_size;
+        float dist = dot(diff, diff);
+        if(dist < brush_size){
+                gl_FragColor = vec4(0.,1.,0.,1.);
+        }  
+        
+    }
+
+    if (hovered == 1){
+        
+
+        vec2 diff = (vUv - panel_pos) * screen_size;
+        float dist = dot(diff, diff);
+        if(dist < panel_size){
+                gl_FragColor = vec4(0.,1.,0.,1.);
         }
+           
     }
     
 

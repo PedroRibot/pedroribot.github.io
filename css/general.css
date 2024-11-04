@@ -8,14 +8,31 @@
 }
 
 canvas {
-    /*width: 100vw;
+    width: 100vw;
     height: 100vh;
-    display: block;*/
+    display:block;
+    scroll-behavior:block;
 
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+#overlay {
+    width: 100vw;
+    height: 100vh;
+    display:block;
+    scroll-behavior:block;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    pointer-events:auto;
+    color: rgba(255, 255, 255, 0);
 }
   
 html, body {
@@ -39,11 +56,11 @@ main {
 /* GENERAL - COLORS */
 :root {
     /* --primary: #FF5F34;*/
-    --primary: #a7a3af;
+    --primary: rgb(167, 163, 175);
     --abcent: #e4e4e4;
     --dark: #eeeeec;
     --light: #252525;
-    --secondary: #FFB704;
+    --secondary: rgb(255, 56, 255);
     --tertiary: #8390FA;
     --other: #5BDD94;
 
@@ -141,8 +158,9 @@ h8 {
 h10 {
     font-family: 'Courier Prime', sans-serif;
     font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: -1.5px;
+    font-size: 25px;
     line-height: 32px;
 }
 
@@ -302,21 +320,22 @@ header {
     
     /*position: sticky;*/
     top: 0;
-    background: var(--dark);
+    /* background: var(--dark); */
     z-index: 10;
 }
 
 .main-name{
     margin-top: 20px;
-    padding: 0 0 15px 0px;
-    border-bottom: 2px solid var(--light);
+    padding: 0 0 5px 0px;
+
+    border-bottom: 1px solid var(--light);
 }
 
 header nav {
     
     /*padding-bottom: 15px;*/
   
-    border-bottom: 2px solid var(--light);
+    border-bottom: 1px solid var(--light);
 }
 
 header #menu-nav {

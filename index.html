@@ -43,6 +43,10 @@
     <link rel="manifest" href="images/favicon/site.webmanifest">
 </head>
 
+<!-- <div id="overlay"></div> -->
+<canvas id="myshader"></canvas>
+<script type="module" src="./js/grayscott.js"></script>
+
 <body>
     <!-- HEADER -->
     <header>
@@ -56,13 +60,13 @@
             
             <div id="menu-nav">
                 <a href="index.html#projects" onclick="closeBurger()" class="active">
-                    <h5>PROJECTS</h4>
+                    <h5>Work</h4>
                 </a>
                 <a href="about.html" onclick="closeBurger()">
-                    <h5>ABOUT ME</h4>
+                    <h5>About me</h4>
                 </a>
                 <a href="contact.html" onclick="closeBurger()">
-                    <h5>CONTACT</h4>
+                    <h5>Contact</h4>
                 </a>
             </div>
         </nav>
@@ -115,12 +119,12 @@
             </div>
            -->
            <!-- data-aos="fade-up" data-aos-duration="600" -->
-            <div class="projects-links">
+            <!-- <div class="projects-links">
                 <h7  id="button-all" style="padding: 0px 15px 5px 0px;">ALL</h7>
                 <h7  id="button-games" style="padding: 0px 15px 5px 0px;">VIDEOGAMES</h7>
                 <h7  id="button-3d"  style="padding: 0px 15px 5px 0px;">PERFORMANCES</h7>
                 
-            </div>
+            </div> -->
             <!-- data-aos="fade-up" data-aos-duration="600" -->
             <div id="projects-container" >
 
@@ -153,6 +157,30 @@
     <script>
         AOS.init();
     </script> -->
+
+    
+    
 </body>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA99Spbk-tQqOR2Ho92S33tH2MbUEMn-FU",
+      authDomain: "pedro-ribot.firebaseapp.com",
+      projectId: "pedro-ribot",
+      storageBucket: "pedro-ribot.firebasestorage.app",
+      messagingSenderId: "549615554447",
+      appId: "1:549615554447:web:d10fd7a0f75c40813485fa"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 
 </html>

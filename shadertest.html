@@ -1,0 +1,47 @@
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!-- WEB DESCRIPTION -->
+    <title>Pedro Ribot</title>
+    <meta name='description' content='Personal portfolio of Pedro Núñez Ribot, game designer, vfx and motion capture.'>
+    <meta name='keywords' content='personal portfolio, pedro núñez ribot , game designer, vfx, motion capture.'>
+    <meta name='author' content='Base: Alicia Martinez (ambiby), modified by Pedro Núñez Ribot'>
+    <meta name='Language' content='ENG'>
+
+     <!-- FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lato:wght@400;900&display=swap"
+         rel="stylesheet">
+       
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+     <!-- FONT AWESOME -->
+     <script src="https://kit.fontawesome.com/aeb58df177.js" crossorigin="anonymous"></script>
+
+    <!-- STYLE -->
+    <link href='css/general.css' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript"src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js" async></script>
+   
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+
+<body style="max-width: 100%;">
+    <canvas class="glslCanvas" data-fragment-url="frag/test.frag"></canvas>
+<script>
+    const canvas = document.querySelector('.glslCanvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const sandbox = new GlslCanvas(canvas);
+</script>
+</body>
+
