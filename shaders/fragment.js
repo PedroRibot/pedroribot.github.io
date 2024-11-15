@@ -9,7 +9,7 @@ void main(){
     
     vec3 color = (1.0 - gs_map, 1.0 - gs_map,1.0 - gs_map) * vec3(0.05, 0.05, .05);
 
-    gl_FragColor = vec4(0.99-color, 1.);
+    gl_FragColor = vec4(0.95-color, 1.);
 }`;
 
 export default frag;
