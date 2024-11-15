@@ -54,8 +54,6 @@ void main(){
     }
 
     if (hovered == 1){
-        
-
         vec2 diff = (vUv - panel_pos) * screen_size;
         float dist = dot(diff, diff);
         if(dist < panel_size){
