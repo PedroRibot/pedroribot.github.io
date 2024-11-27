@@ -30,6 +30,9 @@ const divProjects = document.getElementById("projects-container");
 function createProject(json) {
   let currentYear = null; // Track the current year of the projects
   let currentRow = null; // Track the current row div
+  const previewContainer = document.getElementById('preview-container');
+  const imgElements = previewContainer.querySelectorAll('.img_preview_big img');
+  const parentImgPreviewDiv = document.querySelector('.img_preview_big');
 
   for (let i = 0; i < json["projects"].length; i++) {
       if (json["projects"][i]["year"] !== currentYear) {
@@ -58,6 +61,45 @@ function createProject(json) {
       hoverDiv.className = "hover-element";
       hoverDiv.id = i;
       projectDiv.append(hoverDiv);
+
+      //ShowPreview
+      hoverDiv.addEventListener('mouseenter', function() {
+            previewContainer.style.display = 'flex';
+            if (json["projects"][i]["big-cover"]) {
+              imgElements[0].src = "images/" + json["projects"][i]["big-cover"];
+              imgElements[0].style.display = "block"; // Make sure it's visible
+              //correct size poster for Kamus and Embodied
+              if (json["projects"][i]["keyword"] == 'wwsd' || json["projects"][i]["keyword"] == 'embodiedmachine' || json["projects"][i]["keyword"] == 'kamusofering') {
+                imgElements[0].style.setProperty('object-fit', 'contain', 'important');
+                imgElements[0].style.setProperty('object-position', 'right', 'important');
+              }else{
+                imgElements[0].style.removeProperty('object-fit');
+                imgElements[0].style.setProperty('object-position', 'center', 'important');
+              }
+
+            } else {
+                imgElements[0].src = "";
+                imgElements[0].style.display = "none"; // Hide the image
+            }
+
+            if (json["projects"][i]["small-cover"]) {
+                imgElements[1].src = "images/" + json["projects"][i]["small-cover"];
+                imgElements[1].style.display = "block"; // Make sure it's visible
+                parentImgPreviewDiv.style.removeProperty('height');
+            } else {
+                imgElements[1].src = "";
+                imgElements[1].style.display = "none"; // Hide the image
+                parentImgPreviewDiv.style.setProperty('height', '100%', 'important');
+
+            }
+            
+            
+      });
+      hoverDiv.addEventListener('mouseleave', function() {
+        previewContainer.style.display = 'none';
+      });
+
+      
 
       // let yearDiv = document.createElement("h5");
       // yearDiv.className = "year-element";
