@@ -141,11 +141,8 @@
 }
 
 .hover-element:hover {
-    
-    border-right: solid 4px var(--light);
-    border-radius: 1%;
-    opacity: 80%;
-   
+    background-color: rgb(255, 93, 201);
+    opacity: 20%;
 }
 
 .project h7{
