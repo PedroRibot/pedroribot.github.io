@@ -28,6 +28,7 @@
     margin-top: 50px;
     width: 50%;
     margin-bottom: 10px;
+    
 }
 
 .projects-links {
@@ -77,8 +78,10 @@
     overflow-y: hidden;
     align-items: center;
     justify-content: center;
+    border: 5px solid var(--secondary);
+    
     /* background-color: aqua; */
-    animation: fadeIn 0.3s ease-in-out forwards;
+    /* animation: fadeIn 0.3s ease-in-out forwards; */
 }
 
 .img_preview_big{
@@ -135,14 +138,26 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 20;
+    z-index: 2;
     cursor: pointer;
     /* background-color: rgb(255, 255, 255); */
 }
 
+.bg-color-element{
+    width: 70vw;
+    position: absolute;
+    height: 25px;
+    left: 0px;
+    top: 30px;
+    
+    z-index: 0;
+    background-color: rgb(255, 255, 0);
+}
+
 .hover-element:hover {
-    background-color: rgb(255, 93, 201);
-    opacity: 20%;
+    /* background-color: rgb(255, 255, 0);
+    opacity: 100%; */
+   
 }
 
 .project h7{

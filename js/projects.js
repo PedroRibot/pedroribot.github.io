@@ -56,15 +56,41 @@ function createProject(json) {
           projectDiv.classList.add("project-" + json["projects"][i]["type-project"][j]);
       }
       currentRow.append(projectDiv); // Append to the current row
+      
+      let titleDiv = document.createElement("h6");
+      titleDiv.textContent = json["projects"][i]["title"];
+      projectDiv.append(titleDiv);
+
+      let descP = document.createElement("h7");
+      descP.className = "short-desc";
+      descP.textContent = json["projects"][i]["short-description"];
+      projectDiv.append(descP);
+      
+      let disciplines = document.createElement("h7");
+      disciplines.className = "roles";
+      disciplines.textContent = json["projects"][i]["disciplines"];
+      projectDiv.append(disciplines);
+
+      let client = document.createElement("h7");
+      client.className = "client";
+      client.textContent = json["projects"][i]["client"][0][0];
+      projectDiv.append(client);
 
       let hoverDiv = document.createElement("div");
       hoverDiv.className = "hover-element";
       hoverDiv.id = i;
       projectDiv.append(hoverDiv);
 
+      let bgcolor = document.createElement("div");
+      bgcolor.className = "bg-color-element";
+      bgcolor.id = i;
+      projectDiv.append(bgcolor);
+      bgcolor.style.display = 'none'
+
       //ShowPreview
       hoverDiv.addEventListener('mouseenter', function() {
             previewContainer.style.display = 'flex';
+            bgcolor.style.display = 'block';
             if (json["projects"][i]["big-cover"]) {
               imgElements[0].src = "images/" + json["projects"][i]["big-cover"];
               imgElements[0].style.display = "block"; // Make sure it's visible
@@ -97,6 +123,7 @@ function createProject(json) {
       });
       hoverDiv.addEventListener('mouseleave', function() {
         previewContainer.style.display = 'none';
+        bgcolor.style.display = 'none';
       });
 
       
@@ -106,24 +133,7 @@ function createProject(json) {
       // yearDiv.textContent = json["projects"][i]["year"];
       // projectDiv.append(yearDiv);
 
-      let titleDiv = document.createElement("h6");
-      titleDiv.textContent = json["projects"][i]["title"];
-      projectDiv.append(titleDiv);
-
-      let descP = document.createElement("h7");
-      descP.className = "short-desc";
-      descP.textContent = json["projects"][i]["short-description"];
-      projectDiv.append(descP);
       
-      let disciplines = document.createElement("h7");
-      disciplines.className = "roles";
-      disciplines.textContent = json["projects"][i]["disciplines"];
-      projectDiv.append(disciplines);
-
-      let client = document.createElement("h7");
-      client.className = "client";
-      client.textContent = json["projects"][i]["client"][0][0];
-      projectDiv.append(client);
   }
 
   clasification();
