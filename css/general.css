@@ -46,7 +46,7 @@ html {
 
 body {
     /* max-width: 1030px;*/
-    max-width: 1200px;
+    
 }
 
 @media only screen and (max-width: 1000px) {
@@ -63,7 +63,7 @@ main {
 /* GENERAL - COLORS */
 :root {
     /* --primary: #FF5F34;*/
-    --primary: rgb(167, 163, 175);
+    --primary: rgb(255, 255, 0);
     --abcent: #e4e4e4;
     --dark: #eeeeec;
     --light: #252525;
@@ -135,6 +135,7 @@ h5 { /* SUB HEADER PROJECTS, ABOUT */
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
+
 }
 
 h6 { 
@@ -260,6 +261,8 @@ a:hover > *{
 
 /* CONTAINERS */
 main {
+    max-width: 1200px;
+    margin: auto;
     padding: 15px;
 }
 
@@ -327,8 +330,11 @@ main {
 header {
     width: 100%;
     padding: 15px 15px 0px 15px;
-
-    
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    /* left: 100px; */
+   
     /*position: sticky;*/
     top: 0;
     /* background: var(--dark); */
@@ -348,7 +354,7 @@ header {
     top: 20px;
     width: 100%;
     height: 17px;
-    
+
     z-index: -1;
     position: absolute;
     
@@ -459,7 +465,7 @@ header #menu-nav a{
         position: fixed;
         top: 0;
         right: -60%;
-        z-index: 1;
+        z-index: 5;
         width: 60%;
         height: 100%;
         background-color: var(--dark);

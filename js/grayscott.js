@@ -45,14 +45,17 @@ export default class GrayScott{
 
 		// create uniforms
 		this.time = 0;
-        this.killrate_min = 0.0605;
+        // this.killrate_min = 0.0605;
 		// this.killrate_max = 0.06232;
-		this.killrate_max = 0.0645;
+		// this.killrate_max = 0.0645;
+		this.killrate_min = 0.06185;
+		this.killrate_max = 0.06295;
         this.feedrate = 0.05888;
+		// this.feedrate = 0.02;
 		// this.feedrate = 0.06;
         this.difussion_a = 1.;
         this.difussion_b = 0.5;
-		this.brush_size = 200;
+		this.brush_size = 250;
 
 		this.addMesh();
 		this.mouseEffects();
