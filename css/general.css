@@ -348,7 +348,7 @@ header {
     /* border-bottom: 1px solid var(--light); */
 }
 
-.main-name-bgcolor{
+/* .main-name-bgcolor{
     background-color: rgb(255, 255, 0);
     left: 0;
     top: 20px;
@@ -358,7 +358,7 @@ header {
     z-index: -1;
     position: absolute;
     
-}
+} */
 
 header nav {
     

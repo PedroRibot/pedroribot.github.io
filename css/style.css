@@ -71,7 +71,7 @@
     position: fixed;
     display:none;
     flex-wrap: wrap;
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
     top: 0px;
     bottom: 0px;
     left: calc(50% + 1200px / 2 - (1200px * 0.45)); 
